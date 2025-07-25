@@ -1,6 +1,6 @@
 import { fetchProduct } from "@/server/productApi";
 
-export default async function Page({
+export default async function ProductPage({
     params,
 }: {
     params: Promise<{ slug: string }>
