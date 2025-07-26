@@ -1,40 +1,25 @@
+import { AllSectionData } from "@/type";
 import CourseAbout from "./CourseAbout";
 import CourseFeatureExplanations from "./CourseFeatureExplanations";
 import CourseFeatures from "./CourseFeatures";
 import CourseInstructors from "./CourseInstructors";
 import CoursePointers from "./CoursePointers";
 
-export default function SectionRenderer({ section }: {
-    section: {
-        type: string;
-        name: string;
-        description: string;
-        bg_color: string;
-        order_idx: number;
-        values: {
-            description: string;
-            has_instructor_page: boolean;
-            image: string;
-            name: string;
-            short_description: string;
-            slug: string;
-        };
-    }[];
-}) {
+export default function SectionRenderer({ section }: AllSectionData) {
     return (
         <>
             {section.map((sec, index) => {
                 switch (sec.type) {
                     case 'instructors':
-                        return <CourseInstructors key={index} />;
+                        return <CourseInstructors key={index} content={sec} />;
                     case 'features':
-                        return <CourseFeatures key={index} />;
+                        return <CourseFeatures key={index} content={sec} />;
                     case 'pointers':
-                        return <CoursePointers key={index} />;
+                        return <CoursePointers key={index} content={sec} />;
                     case 'about':
-                        return <CourseAbout key={index} />;
+                        return <CourseAbout key={index} content={sec} />;
                     case 'feature_explanations':
-                        return <CourseFeatureExplanations key={index} />;
+                        return <CourseFeatureExplanations key={index} content={sec} />;
                     default:
                         console.warn(`Unknown section type: ${sec.type}`);
                         return null;

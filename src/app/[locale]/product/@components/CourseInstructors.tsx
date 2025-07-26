@@ -1,5 +1,6 @@
+import { SectionData } from "@/type"
 
-const CourseInstructors = () => {
+const CourseInstructors = ({ content }: SectionData) => {
     return (
         <div>CourseInstructors</div>
     )

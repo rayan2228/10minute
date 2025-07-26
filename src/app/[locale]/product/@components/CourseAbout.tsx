@@ -1,9 +1,9 @@
-import React from 'react'
+import { SectionData } from '@/type'
 
-const CourseAbout = () => {
-  return (
-    <div>CourseAbout</div>
-  )
+const CourseAbout = ({ content }: SectionData) => {
+    return (
+        <div>CourseAbout</div>
+    )
 }
 
 export default CourseAbout
