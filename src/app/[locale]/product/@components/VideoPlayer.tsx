@@ -38,7 +38,7 @@ const VideoPlayer = ({
                 >
                     <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                         <svg
-                            className="w-14 h-14 text-[#1CAB55] shadow-one"
+                            className="w-14 h-14 text-two shadow-one"
                             fill="currentColor"
                             viewBox="0 0 84 84"
                         >

@@ -2,12 +2,16 @@
 
 :root {
   --shadow-one: 0px 8px 24px rgba(255, 255, 255, 0.384);
-  --color-text-one: #111827;
+  --color-one: #111827;
+  --color-two: #1cab55;
+  --color-three: #15803d;
 }
 
 @theme {
   --shadow-one: var(--shadow-one);
-  --color-text-one: var(--color-text-one);
+  --color-one: var(--color-one);
+  --color-two: var(--color-two);
+  --color-three: var(--color-three);
 }
 
 .container {

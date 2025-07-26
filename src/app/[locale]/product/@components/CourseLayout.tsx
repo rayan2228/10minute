@@ -2,6 +2,7 @@
 import { CourseData } from "@/type"
 import CourseTitle from "./CourseTitle"
 import CourseTrailer from "./CourseTrailer"
+import EnrollButton from "./EnrollButton"
 import Price from "./Price"
 
 const CourseLayout = ({ content }: { content: CourseData }) => {
@@ -14,6 +15,7 @@ const CourseLayout = ({ content }: { content: CourseData }) => {
                 <CourseTrailer content={content.media} />
                 <div className="px-3">
                     <Price />
+                    <EnrollButton content={content.cta_text} />
                 </div>
             </div>
         </div>
