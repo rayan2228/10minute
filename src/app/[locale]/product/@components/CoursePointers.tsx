@@ -1,8 +1,11 @@
+import Title from "@/shared components/Title"
 import { SectionData } from "@/type"
 
 const CoursePointers = ({ content }: SectionData) => {
     return (
-        <div>CoursePointers</div>
+        <div>
+            <Title title={content.name} />
+        </div>
     )
 }
 

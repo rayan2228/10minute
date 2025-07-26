@@ -1,8 +1,11 @@
+import Title from "@/shared components/Title"
 import { SectionData } from "@/type"
 
 const CourseFeatures = ({ content }: SectionData) => {
     return (
-        <div>CourseFeatures</div>
+       <div>
+            <Title title={content.name} />
+        </div>
     )
 }
 
