@@ -4,6 +4,7 @@ import CourseTitle from "./CourseTitle"
 import CourseTrailer from "./CourseTrailer"
 import EnrollButton from "./EnrollButton"
 import Price from "./Price"
+import CourseChecklist from "./CourseChecklist"
 
 const CourseLayout = ({ content }: { content: CourseData }) => {
     return (
@@ -13,9 +14,10 @@ const CourseLayout = ({ content }: { content: CourseData }) => {
             </div>
             <div className="w-[40%] border-2 border-gray-200 bg-white ">
                 <CourseTrailer content={content.media} />
-                <div className="px-3">
+                <div className="p-3">
                     <Price />
                     <EnrollButton content={content.cta_text} />
+                    <CourseChecklist content={content.checklist} />
                 </div>
             </div>
         </div>
