@@ -10,9 +10,9 @@ interface SliderContainerProps {
     settings?: object
 }
 
-const SliderContainer = ({ children, settings = {} }: SliderContainerProps) => {
+const SliderContainer = ({ children, settings = {}, ...props }: SliderContainerProps) => {
 
-    return <Slider {...settings} >{children}</Slider>
+    return <Slider {...settings}{...props}>{children}</Slider>
 }
 
 export default SliderContainer
