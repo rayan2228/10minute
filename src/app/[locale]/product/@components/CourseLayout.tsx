@@ -1,10 +1,10 @@
 
 import { CourseData } from "@/type"
+import CourseChecklist from "./CourseChecklist"
 import CourseTitle from "./CourseTitle"
 import CourseTrailer from "./CourseTrailer"
 import EnrollButton from "./EnrollButton"
 import Price from "./Price"
-import CourseChecklist from "./CourseChecklist"
 
 const CourseLayout = ({ content }: { content: CourseData }) => {
     return (
