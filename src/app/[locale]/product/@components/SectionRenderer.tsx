@@ -7,7 +7,7 @@ import CoursePointers from "./CoursePointers";
 
 export default function SectionRenderer({ section }: AllSectionData) {
     return (
-        <>
+        <div className="flex flex-col gap-5 mt-40">
             {section.map((sec, index) => {
                 switch (sec.type) {
                     case 'instructors':
@@ -21,10 +21,9 @@ export default function SectionRenderer({ section }: AllSectionData) {
                     case 'feature_explanations':
                         return <CourseFeatureExplanations key={index} content={sec} />;
                     default:
-                        console.warn(`Unknown section type: ${sec.type}`);
                         return null;
                 }
             })}
-        </>
+        </div>
     );
 }

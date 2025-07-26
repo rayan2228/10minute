@@ -1,10 +1,10 @@
 "use server"
 
 import { API_BASE_URL } from "@/constants";
-const fetchProduct = async (slug: string) => {
+const fetchProduct = async (slug: string, lang: string = "bn") => {
     try {
         const res = await fetch(
-            `${API_BASE_URL}/${slug}`,
+            `${API_BASE_URL}/${slug}?lang=${lang}`,
             {
                 headers: {
                     'X-TENMS-SOURCE-PLATFORM': 'web',
