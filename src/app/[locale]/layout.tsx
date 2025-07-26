@@ -1,5 +1,5 @@
 
-import Header from "@/shared components/layouts/Header";
+// import Header from "@/shared components/layouts/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
@@ -27,7 +27,7 @@ export default async function RootLayout({
       <body
         className={`${inter.className}  antialiased`}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>

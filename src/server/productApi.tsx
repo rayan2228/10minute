@@ -18,7 +18,8 @@ const fetchProduct = async (slug: string) => {
             throw new Error(`API request failed with status ${res.status} `);
         }
 
-        return await res.json();
+        const data = await res.json();
+        return data.data;
     } catch (error) {
         console.error('Failed to fetch product data:', error);
         throw error;

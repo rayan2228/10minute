@@ -12,7 +12,7 @@ const RichText: React.FC<RichTextProps> = ({ html, className = '', sanitize = fa
 
     return (
         <div
-            className={`max-w-none ${className}`}
+            className={`max-w-none text-base font-normal ${className}`}
             dangerouslySetInnerHTML={{ __html: cleanHtml }}
         />
     );
