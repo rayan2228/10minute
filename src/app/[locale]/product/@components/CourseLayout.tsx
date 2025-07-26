@@ -5,12 +5,14 @@ import CourseTitle from "./CourseTitle"
 import CourseTrailer from "./CourseTrailer"
 import EnrollButton from "./EnrollButton"
 import Price from "./Price"
+import SectionRenderer from "./SectionRenderer"
 
 const CourseLayout = ({ content }: { content: CourseData }) => {
     return (
         <div className="flex  py-10 z-10 relative">
             <div className="w-[60%] py-5 text-white">
                 <CourseTitle content={content} />
+                <SectionRenderer section={content.sections} />
             </div>
             <div className="w-[40%] border-2 border-gray-200 bg-white ">
                 <CourseTrailer content={content.media} />

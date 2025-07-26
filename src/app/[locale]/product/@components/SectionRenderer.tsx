@@ -1,41 +1,45 @@
+import CourseAbout from "./CourseAbout";
+import CourseFeatureExplanations from "./CourseFeatureExplanations";
+import CourseFeatures from "./CourseFeatures";
+import CourseInstructors from "./CourseInstructors";
+import CoursePointers from "./CoursePointers";
 
-// import CourseDetails from './CourseDetails';
-// import CourseFeatures from './CourseFeatures';
-// import CourseInstructors from './CourseInstructors';
-// import CourseLayout from './CourseLayout';
-
-
-// export default function SectionRenderer({ section }: SectionRendererProps) {
-//     // Skip rendering if no content
-//     if (!section.content ||
-//         (Array.isArray(section.content) && section.content.length === 0) ||
-//         (typeof section.content === 'string' && section.content.trim() === '')) {
-//         return null;
-//     }
-
-//     switch (section.type) {
-//         case 'instructor':
-//             return <CourseInstructors
-//                 instructors={section.content as Instructor[]}
-//                 title={section.title}
-//             />;
-//         case 'features':
-//             return <CourseLayout
-//                 content={section.content as string}
-//                 title={section.title}
-//             />;
-//         case 'pointers':
-//             return <CourseFeatures
-//                 content={section.content as string}
-//                 title={section.title}
-//             />;
-//         case 'about':
-//             return <CourseDetails
-//                 content={section.content as string}
-//                 title={section.title}
-//             />;
-//         default:
-//             console.warn(`Unknown section type: ${section.type}`);
-//             return null;
-//     }
-// }
+export default function SectionRenderer({ section }: {
+    section: {
+        type: string;
+        name: string;
+        description: string;
+        bg_color: string;
+        order_idx: number;
+        values: {
+            description: string;
+            has_instructor_page: boolean;
+            image: string;
+            name: string;
+            short_description: string;
+            slug: string;
+        };
+    }[];
+}) {
+    return (
+        <>
+            {section.map((sec, index) => {
+                switch (sec.type) {
+                    case 'instructors':
+                        return <CourseInstructors key={index} />;
+                    case 'features':
+                        return <CourseFeatures key={index} />;
+                    case 'pointers':
+                        return <CoursePointers key={index} />;
+                    case 'about':
+                        return <CourseAbout key={index} />;
+                    case 'feature_explanations':
+                        return <CourseFeatureExplanations key={index} />;
+                    default:
+                        console.warn(`Unknown section type: ${sec.type}`);
+                        return null;
+                }
+            })}
+        </>
+    );
+}
