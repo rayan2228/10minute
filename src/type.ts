@@ -35,3 +35,8 @@ export interface AllSectionData {
 export interface SectionData {
   content: SectionItem;
 }
+
+export type LanguageContextValue = {
+  lang: string;
+  setLang: (lang: string) => void;
+};
