@@ -44,7 +44,7 @@ const CourseTrailer = ({
     }
 
     return (
-        <div className="space-y-2">
+        <div className="space-y-2 p-1">
             {/* Main Slider */}
             <Slider {...mainSettings} ref={slider1}>
                 {content.map((item, index) =>
@@ -67,21 +67,23 @@ const CourseTrailer = ({
             </Slider>
 
             {/* Thumbnail Slider */}
-            <Slider {...thumbSettings} ref={slider2}>
-                {content.map((item, index) =>
-                    item.name === "preview_gallery" && (
-                        <div key={index} className="px-1">
-                            <Image
-                                src={item.thumbnail_url || item.resource_value}
-                                alt={item.name}
-                                width={100}
-                                height={20}
-                                className="rounded object-cover w-full h-[40px]"
-                            />
-                        </div>
-                    )
-                )}
-            </Slider>
+            <div className="pl-3">
+                <Slider {...thumbSettings} ref={slider2}>
+                    {content.map((item, index) =>
+                        item.name === "preview_gallery" && (
+                            <div key={index} className="px-1">
+                                <Image
+                                    src={item.thumbnail_url || item.resource_value}
+                                    alt={item.name}
+                                    width={100}
+                                    height={20}
+                                    className="rounded object-cover w-full h-[40px]"
+                                />
+                            </div>
+                        )
+                    )}
+                </Slider>
+            </div>
         </div>
     )
 }
