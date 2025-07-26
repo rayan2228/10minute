@@ -36,14 +36,14 @@ const VideoPlayer = ({
                     }}
                     onClick={handleClick}
                 >
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                         <svg
-                            className="w-16 h-16 text-white"
+                            className="w-14 h-14 text-[#1CAB55] shadow-one"
                             fill="currentColor"
                             viewBox="0 0 84 84"
                         >
-                            <circle cx="42" cy="42" r="42" fill="rgba(0, 0, 0, 0.6)" />
-                            <polygon points="33,24 33,60 60,42" fill="white" />
+                            <circle cx="42" cy="42" r="42" fill="white" />
+                            <polygon points="33,24 33,60 60,42" fill="text-[#1CAB55]" />
                         </svg>
                     </div>
                 </div>

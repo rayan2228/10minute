@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* :root {
-  
+:root {
+  --shadow-one: 0px 8px 24px rgba(255, 255, 255, 0.384);
 }
 
-@theme inline {
-} */
+@theme {
+  --shadow-one: var(--shadow-one);
+}
 
 .container {
   max-width: 1320px;
