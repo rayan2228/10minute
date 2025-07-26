@@ -1,11 +1,9 @@
 
-import LanguageRedirect from "@/shared components/LanguageSwitcher";
 import Header from "@/shared components/layouts/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 const inter = Inter({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
@@ -27,7 +25,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body
-        className={`${inter.variable}  antialiased`}
+        className={`${inter.className}  antialiased`}
       >
         <Header />
         {children}
