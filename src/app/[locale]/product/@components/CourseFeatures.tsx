@@ -6,7 +6,7 @@ const CourseFeatures = ({ content }: SectionData) => {
     return (
         <div className={`order-${content.order_idx}`}>
             <Title title={content.name} />
-            <div className="flex flex-wrap bg-[#111926] p-5 mt-4 gap-5 gap-y-10 rounded-lg items-center">
+            <div className="flex flex-wrap bg-[#111926] p-8 mt-4 gap-5 gap-y-10 rounded-lg items-center">
                 {
                     content.values.map((item) => (
                         <div key={item.id} className="flex items-start w-[48%] gap-4 text-white">
