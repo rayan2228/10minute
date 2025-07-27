@@ -1,4 +1,6 @@
 export default function Loading() {
-    // Or a custom loading skeleton component
-    return <p>Loading...</p>
+    return <div className="flex justify-center items-center h-screen">
+        <div className="rounded-full h-20 w-20 bg-two animate-ping" />
+    </div>
+
 }

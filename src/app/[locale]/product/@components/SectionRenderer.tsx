@@ -1,10 +1,11 @@
+import FAQ from "@/shared components/FAQ";
 import { AllSectionData } from "@/type";
 import CourseAbout from "./CourseAbout";
+import CourseEngagement from "./CourseEngagement";
 import CourseFeatureExplanations from "./CourseFeatureExplanations";
 import CourseFeatures from "./CourseFeatures";
 import CourseInstructors from "./CourseInstructors";
 import CoursePointers from "./CoursePointers";
-import CourseEngagement from "./CourseEngagement";
 
 export default function SectionRenderer({ section }: AllSectionData) {
     return (
@@ -23,6 +24,8 @@ export default function SectionRenderer({ section }: AllSectionData) {
                         return <CourseFeatureExplanations key={index} content={sec} />;
                     case "group_join_engagement":
                         return <CourseEngagement key={index} content={sec} />
+                    case "faq":
+                        return <FAQ key={index} content={sec} />
                     default:
                         return null;
                 }
