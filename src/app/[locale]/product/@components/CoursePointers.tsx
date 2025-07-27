@@ -3,7 +3,7 @@ import { SectionData } from "@/type"
 
 const CoursePointers = ({ content }: SectionData) => {
     return (
-        <div>
+           <div className={`order-${content.order_idx}`}>
             <Title title={content.name} />
         </div>
     )
