@@ -7,8 +7,6 @@ export default async function ProductPage({
     params: Promise<{ slug: string, locale: string }>
 }) {
     const { slug, locale: lang } = await params
-    console.log("t", lang);
-
     const data = await fetchProduct(slug, lang)
     return <section className="mt-5 relative">
         <div className="min-h-[300px] absolute top-0 left-0 w-full " style={{
