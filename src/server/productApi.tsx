@@ -1,7 +1,9 @@
 "use server"
 
 import { API_BASE_URL } from "@/constants";
+import { log } from "console";
 const fetchProduct = async (slug: string, lang: string = "bn") => {
+    log(lang)
     try {
         const res = await fetch(
             `${API_BASE_URL}/${slug}?lang=${lang}`,

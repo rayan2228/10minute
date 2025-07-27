@@ -1,9 +1,8 @@
 
-// import Header from "@/shared components/layouts/Header";
+import Header from "@/shared components/layouts/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
-import LanguageProvider from "@/provider/LanguageProvider";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -28,10 +27,8 @@ export default async function RootLayout({
       <body
         className={`${inter.className}  antialiased`}
       >
-        <LanguageProvider>
-          {/* <Header /> */}
-          {children}
-        </LanguageProvider>
+        <Header />
+        {children}
       </body>
     </html>
   );
