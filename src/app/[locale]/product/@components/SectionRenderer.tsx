@@ -4,6 +4,7 @@ import CourseFeatureExplanations from "./CourseFeatureExplanations";
 import CourseFeatures from "./CourseFeatures";
 import CourseInstructors from "./CourseInstructors";
 import CoursePointers from "./CoursePointers";
+import CourseEngagement from "./CourseEngagement";
 
 export default function SectionRenderer({ section }: AllSectionData) {
     return (
@@ -20,6 +21,8 @@ export default function SectionRenderer({ section }: AllSectionData) {
                         return <CourseAbout key={index} content={sec} />;
                     case 'feature_explanations':
                         return <CourseFeatureExplanations key={index} content={sec} />;
+                    case "group_join_engagement":
+                        return <CourseEngagement key={index} content={sec} />
                     default:
                         return null;
                 }
