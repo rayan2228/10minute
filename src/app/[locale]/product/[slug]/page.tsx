@@ -21,7 +21,7 @@ export default async function ProductPage({
 }) {
     const { slug, locale: lang } = await params
     const data = await fetchProduct(slug, lang)
-    return <section className="mt-5 relative">
+    return <section className=" relative">
         <div className="min-h-[300px] absolute top-0 left-0 w-full " style={{
             backgroundImage: `url(https://cdn.10minuteschool.com/images/ui_%281%29_1716445506383.jpeg)`,
             backgroundSize: 'cover',
