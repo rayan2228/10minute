@@ -1,6 +1,19 @@
 import { fetchProduct } from "@/server/productApi";
 import CourseLayout from "../@components/CourseLayout";
 
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string, locale: string }>
+}) {
+    const { slug, locale: lang } = await params
+    const data = await fetchProduct(slug, lang)
+    return {
+        title: data.title,
+        description: data.description.replace(/<[^>]*>?/gm, '').trim(),
+    }
+}
+
 export default async function ProductPage({
     params,
 }: {
