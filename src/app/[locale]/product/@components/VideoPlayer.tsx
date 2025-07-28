@@ -1,24 +1,28 @@
-"use client"
-import { useState } from "react"
+"use client";
+import { useState } from "react";
 
 const VideoPlayer = ({
     item,
 }: {
     item: {
-        resource_type: string
-        resource_value: string
-        name: string
-        thumbnail_url?: string
-    }
+        resource_type: string;
+        resource_value: string;
+        name: string;
+        thumbnail_url?: string;
+    };
 }) => {
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const handleClick = () => {
-        setIsPlaying(true)
-    }
+        setIsPlaying(true);
+    };
+
+    const thumbnail =
+        item.thumbnail_url ||
+        `https://img.youtube.com/vi/${item.resource_value}/hqdefault.jpg`;
 
     return (
-        <div className="relative w-full h-[280px]">
+        <div className="relative w-full h-[132px] sm:h-[220px] md:h-[250px] lg:h-[280px] rounded overflow-hidden">
             {isPlaying ? (
                 <iframe
                     className="w-full h-full"
@@ -31,25 +35,24 @@ const VideoPlayer = ({
             ) : (
                 <div
                     className="w-full h-full bg-cover bg-center cursor-pointer relative"
-                    style={{
-                        backgroundImage: `url(${item.thumbnail_url || `https://img.youtube.com/vi/${item.resource_value}/hqdefault.jpg`})`,
-                    }}
+                    style={{ backgroundImage: `url(${thumbnail})` }}
                     onClick={handleClick}
                 >
-                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
-                        <svg
-                            className="w-14 h-14 text-two shadow-one"
-                            fill="currentColor"
-                            viewBox="0 0 84 84"
-                        >
-                            <circle cx="42" cy="42" r="42" fill="white" />
-                            <polygon points="33,24 33,60 60,42" fill="text-[#1CAB55]" />
-                        </svg>
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                        <div className="lg:w-16 lg:h-16 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-2xl shadow-white">
+                            <svg
+                                className="w-6 h-6 text-green-600"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <polygon points="6,4 6,16 16,10" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default VideoPlayer
+export default VideoPlayer;
