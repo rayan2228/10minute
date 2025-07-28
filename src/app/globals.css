@@ -18,3 +18,7 @@
   max-width: 1320px;
   margin: 0 auto;
 }
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+}

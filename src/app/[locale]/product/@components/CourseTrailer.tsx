@@ -46,13 +46,13 @@ const CourseTrailer = ({
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 5,
+                    slidesToShow: 6,
                 },
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 6,
                 },
             },
             {
@@ -65,23 +65,18 @@ const CourseTrailer = ({
     }
 
     return (
-        <div className="lg:space-y-2 space-y-1.5 lg:p-1">
+        <div className="space-y-2  lg:p-1">
             {/* Main Slider */}
             <Slider {...mainSettings} ref={slider1}>
                 {content.map((item, index) =>
                     item.name === "preview_gallery" ? (
                         item.resource_type === "image" ? (
-                            <div
-                                key={index}
-                                className="w-full h-[132px] sm:h-[220px] md:h-[250px] lg:h-[280px]"
-                            >
-                                <Image
-                                    src={item.resource_value}
-                                    alt={item.name}
-                                    width={392}
-                                    height={220}
-                                    className="object-contain w-full h-full"
-                                />
+                            <div className="h-full " ><Image
+                                src={item.resource_value}
+                                alt={item.name}
+                                width={640}
+                                height={360}
+                            />
                             </div>
                         ) : (
                             <VideoPlayer key={index} item={item} />
