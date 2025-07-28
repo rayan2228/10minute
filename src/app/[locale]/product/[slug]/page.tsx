@@ -37,12 +37,12 @@ export default async function ProductPage({
             </div>
         </div>
         <div className="container">
-            <div className="flex items-start  gap-15 md:flex-row flex-col px-4 pt-10">
+            <div className="flex items-start  md:gap-15 md:flex-row flex-col px-4 pt-10">
                 <div className="w-full md:w-[60%] ">
                     <SectionRenderer section={data.sections} />
                 </div>
-                <div className="w-[35%] border-2 border-t-transparent border-gray-200 bg-white -mt-10 ">
-                    <div className="p-3 flex flex-col gap-3">
+                <div className="w-full md:w-[35%]  xl:border-2 border-t-transparent border-gray-200 bg-white -mt-10">
+                    <div className="p-3  flex flex-col gap-3">
                         <Price />
                         <EnrollButton content={data.cta_text} />
                         <CourseChecklist content={data.checklist} />

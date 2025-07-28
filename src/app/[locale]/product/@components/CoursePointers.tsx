@@ -5,11 +5,11 @@ const CoursePointers = ({ content }: SectionData) => {
     return (
         <div className={`order-${content.order_idx}`}>
             <Title title={content.name} />
-            <div className="flex flex-wrap border border-gray-200 p-5 mt-4 gap-4 sm:gap-5 rounded-lg">
+            <div className="flex flex-wrap border border-gray-200 p-5 mt-4 gap-4 lg:gap-5 rounded-lg">
                 {content.values.map((item) => (
                     <div
                         key={item.id}
-                        className="w-full sm:w-[48%] flex items-start gap-3"
+                        className="w-full lg:w-[48%] flex items-start gap-3"
                     >
                         <svg
                             stroke="currentColor"

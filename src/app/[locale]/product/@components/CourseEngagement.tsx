@@ -15,7 +15,7 @@ const CourseEngagement = ({ content }: SectionData) => {
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
-            className="rounded-lg p-5 sm:p-8 flex flex-col lg:flex-row gap-5 justify-between items-start lg:items-center"
+            className="rounded-lg p-5 lg:p-8 flex flex-col lg:flex-row gap-5 justify-between items-start lg:items-center"
           >
             {/* Left content */}
             <div className="flex flex-col gap-4 w-full lg:w-[52%]">
@@ -27,13 +27,13 @@ const CourseEngagement = ({ content }: SectionData) => {
               />
               <h4
                 style={{ color: item.title_color }}
-                className="text-lg sm:text-xl font-semibold leading-snug"
+                className="text-lg lg:text-xl font-semibold leading-snug"
               >
                 {item.title}
               </h4>
               <p
                 style={{ color: item.description_color }}
-                className="text-sm sm:text-base leading-relaxed"
+                className="text-lg lg:text-base leading-relaxed"
               >
                 {item.description}
               </p>
