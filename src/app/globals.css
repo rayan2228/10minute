@@ -20,5 +20,19 @@
 }
 
 .aspect-video {
-    aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 9;
+}
+
+.slick-prev:before {
+  content: "" !important;
+}
+
+.slick-next:before {
+  content: "" !important;
+}
+
+@layer components{
+  .arrow{
+    @apply !bg-white/90  rounded-full  !flex !items-center !justify-center !w-[25px] !h-[25px] !z-10 cursor-pointer relative
+  }
 }

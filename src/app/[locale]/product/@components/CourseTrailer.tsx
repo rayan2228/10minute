@@ -1,12 +1,44 @@
 "use client"
 
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
+import { FC, useEffect, useRef, useState } from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 import VideoPlayer from "./VideoPlayer"
 
+interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: () => void;
+}
+export const SampleNextArrow: FC<ArrowProps> = ({ className = '', style, onClick }) => {
+    return (
+        <div
+            className={`${className} arrow !top-1/2 !right-3 `}
+            style={{ ...style }}
+            onClick={onClick}
+        >
+            <ChevronRight className="text-black w-[20px]" />
+        </div>
+    );
+};
+
+
+
+
+export const SamplePrevArrow: FC<ArrowProps> = ({ className = '', style, onClick }) => {
+    return (
+        <div
+            className={`${className} arrow !top-1/2 !left-3 `}
+            style={{ ...style }}
+            onClick={onClick}
+        >
+            <ChevronLeft className="text-black w-[20px]" />
+        </div>
+    );
+};
 const CourseTrailer = ({
     content,
 }: {
@@ -31,9 +63,11 @@ const CourseTrailer = ({
     const mainSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         fade: true,
         asNavFor: nav2 as Slider,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
     }
 
     const thumbSettings = {
