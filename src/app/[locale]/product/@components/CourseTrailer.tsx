@@ -120,17 +120,17 @@ const CourseTrailer = ({
             </Slider>
 
             {/* Thumbnail Slider */}
-            <div className="pl-3">
+            <div className="pl-3 slick-thumb">
                 <Slider {...thumbSettings} ref={slider2}>
                     {content.map((item, index) =>
                         item.name === "preview_gallery" && (
-                            <div key={index} className="px-1">
+                            <div key={index} className="px-1 ">
                                 <Image
                                     src={item.thumbnail_url || item.resource_value}
                                     alt={item.name}
                                     width={100}
                                     height={20}
-                                    className="rounded object-cover"
+                                    className=" object-cover rounded" 
                                 />
                             </div>
                         )

@@ -31,8 +31,12 @@
   content: "" !important;
 }
 
-@layer components{
-  .arrow{
-    @apply !bg-white/90  rounded-full  !flex !items-center !justify-center !w-[25px] !h-[25px] !z-10 cursor-pointer relative
+.slick-thumb .slick-current img {
+  border: 2px solid var(--color-two) !important;
+}
+
+@layer components {
+  .arrow {
+    @apply !bg-white/90  rounded-full  !flex !items-center !justify-center !w-[25px] !h-[25px] !z-10 cursor-pointer relative;
   }
 }

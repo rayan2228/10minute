@@ -5,7 +5,7 @@ import CourseTrailer from "./CourseTrailer"
 
 const CourseLayout = ({ content }: { content: CourseData }) => {
     return (
-        <div className="flex items-end lg:items-start  md:gap-15 md:flex-row flex-col px-4 pt-10">
+        <div className="flex items-end xl:items-start  md:gap-15 md:flex-row flex-col px-4 pt-10">
             <div className="w-full md:w-[60%] py-5 text-white">
                 <CourseTitle content={content} />
             </div>
