@@ -9,7 +9,7 @@ const CourseLayout = ({ content }: { content: CourseData }) => {
             <div className="w-full md:w-[60%] py-5 text-white">
                 <CourseTitle content={content} />
             </div>
-            <div className="w-full md:w-[35%] border-b-transparent  sm:border-2 border-gray-200 md:bg-white md:order-1 -order-1 ">
+            <div className="w-full md:w-[35%] border-b-transparent  md:border-2 border-gray-200 md:bg-white md:order-1 -order-1 ">
                 <CourseTrailer content={content.media} />
             </div>
         </div>

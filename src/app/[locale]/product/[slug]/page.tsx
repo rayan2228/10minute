@@ -71,7 +71,7 @@ export default async function ProductPage({
                         <div className="w-full md:w-[60%]">
                             <SectionRenderer section={data.sections} />
                         </div>
-                        <div className="w-full md:w-[35%] xl:border-2 border-t-transparent border-gray-200 bg-white -mt-10">
+                        <div className="w-full my-5 md:my-0 md:w-[35%] xl:border-2 border-t-transparent border-gray-200 bg-white -mt-10 md:order-1 -order-99">
                             <div className="p-3 flex flex-col gap-3">
                                 <Price />
                                 <EnrollButton content={data.cta_text} />
