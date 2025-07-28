@@ -9,7 +9,7 @@ import CoursePointers from "./CoursePointers";
 
 export default function SectionRenderer({ section }: AllSectionData) {
     return (
-        <div className="flex flex-col gap-10 mt-40 text-one">
+        <div className="flex flex-col gap-10 lg:mt-40 text-one">
             {section.map((sec, index) => {
                 switch (sec.type) {
                     case 'instructors':
