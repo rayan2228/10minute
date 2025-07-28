@@ -1,10 +1,8 @@
 
 import { fetchProduct } from "@/server/productApi";
 import { notFound } from 'next/navigation';
-import CourseChecklist from "../@components/CourseChecklist";
 import CourseLayout from "../@components/CourseLayout";
-import EnrollButton from "../@components/EnrollButton";
-import Price from "../@components/Price";
+import CTAContainer from "../@components/CTAContainer";
 import SectionRenderer from "../@components/SectionRenderer";
 
 export const revalidate = 3600;
@@ -71,12 +69,8 @@ export default async function ProductPage({
                         <div className="w-full md:w-[60%]">
                             <SectionRenderer section={data.sections} />
                         </div>
-                        <div className="w-full my-5 md:my-0 md:w-[35%] xl:border-2 border-t-transparent border-gray-200 bg-white -mt-10 md:order-1 -order-99">
-                            <div className="p-3 flex flex-col gap-3">
-                                <Price />
-                                <EnrollButton content={data.cta_text} />
-                                <CourseChecklist content={data.checklist} />
-                            </div>
+                        <div className="w-full my-5   md:w-[35%] xl:border-2 border-t-transparent border-gray-200 bg-white -mt-10 md:order-1 -order-99">
+                            <CTAContainer content={data} />
                         </div>
                     </div>
                 </div>
