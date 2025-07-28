@@ -3,6 +3,7 @@ import Header from "@/shared components/layouts/Header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
+import Footer from "@/shared components/layouts/Footer";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -29,6 +30,7 @@ export default async function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
