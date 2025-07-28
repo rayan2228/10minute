@@ -96,7 +96,7 @@ const CourseTrailer = ({
                                     alt={item.name}
                                     width={100}
                                     height={20}
-                                    className="rounded object-cover w-full h-[40px] sm:h-[45px] md:h-[50px]"
+                                    className="rounded object-cover"
                                 />
                             </div>
                         )

@@ -11,14 +11,14 @@ const CourseInstructors = ({ content }: SectionData) => {
             {content.values.map((item, index) => (
                 <div
                     key={index}
-                    className="flex flex-col sm:flex-row rounded-lg items-center border border-gray-200 p-4 sm:p-5 mt-4 gap-4 sm:gap-5"
+                    className="flex   rounded-lg items-center border border-gray-200 p-1 sm:p-5 mt-4 gap-4 sm:gap-5"
                 >
                     <Image
                         src={item.image}
                         alt={item.name}
                         width={73}
                         height={73}
-                        className="rounded-full lg:w-[73px] lg:h-[73px] w-auto h-auto"
+                        className="rounded-full  "
                     />
                     <div className="flex flex-col text-sm sm:text-base">
                         {item.has_instructor_page ? (
@@ -31,7 +31,7 @@ const CourseInstructors = ({ content }: SectionData) => {
                         ) : (
                             <h4 className="text-base sm:text-lg font-medium">{item.name}</h4>
                         )}
-                        <RichText className="text-gray-600 text-sm leading-relaxed" html={item.description} />
+                        <RichText className="text-gray-600 w-full  text-sm leading-relaxed" html={item.description} />
                     </div>
                 </div>
             ))}

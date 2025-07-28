@@ -27,7 +27,7 @@ const CourseTitle = ({ content, className }: { content: CourseData, className?: 
 
             {/* Description */}
             <RichText
-                className="text-[#a3a3a3] leading-relaxed max-w-full sm:max-w-[90%] md:max-w-[85%]"
+                className="text-[#a3a3a3] leading-relaxed "
                 html={content.description}
             />
         </div>
