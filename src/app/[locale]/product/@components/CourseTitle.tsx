@@ -12,7 +12,7 @@ const CourseTitle = ({ content, className }: { content: CourseData, className?: 
             </h1>
 
             {/* Rating & Link */}
-            <div className="inline-flex items-center text-sm sm:text-base font-normal gap-2 flex-wrap lg:justify-start lg:text-left justify-center text-center">
+            <div className="inline-flex items-center text-sm sm:text-base font-normal gap-2 flex-wrap lg:justify-start lg:text-left  text-center">
                 <Image
                     src="https://cdn.10minuteschool.com/images/Dev_Handoff_Q1_24_Frame_2_1725444418666.png"
                     alt="review_star"
