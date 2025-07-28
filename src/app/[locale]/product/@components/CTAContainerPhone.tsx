@@ -2,16 +2,15 @@
 
 import { CourseData } from "@/type";
 import { useEffect, useState } from 'react';
-import CourseChecklist from "./CourseChecklist";
 import EnrollButton from "./EnrollButton";
 import Price from "./Price";
 
-const CTAContainer = ({ content }: { content: CourseData }) => {
+const CTAContainerPhone = ({ content }: { content: CourseData }) => {
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsSticky(window.scrollY > 400);
+            setIsSticky(window.scrollY > 1000);
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -22,14 +21,13 @@ const CTAContainer = ({ content }: { content: CourseData }) => {
 
     return (
         <div
-            className={`p-3 flex flex-col gap-3 transition-all duration-300  ${isSticky && 'md:fixed md:top-40 lg:top-35 md:border-2 md:border-gray-200 md:bg-white'
+            className={`p-3 flex flex-col gap-3 transition-all duration-300 md:hidden bg-white border-t-2 border-gray-200   ${isSticky && "fixed bottom-0 left-0 right-0 "
                 }`}
         >
             <Price />
             <EnrollButton content={content.cta_text} />
-            <CourseChecklist content={content.checklist} />
         </div>
     );
 };
 
-export default CTAContainer;
+export default CTAContainerPhone;

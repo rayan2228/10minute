@@ -3,6 +3,7 @@ import { fetchProduct } from "@/server/productApi";
 import { notFound } from 'next/navigation';
 import CourseLayout from "../@components/CourseLayout";
 import CTAContainer from "../@components/CTAContainer";
+import CTAContainerPhone from "../@components/CTAContainerPhone";
 import SectionRenderer from "../@components/SectionRenderer";
 
 export const revalidate = 3600;
@@ -74,6 +75,7 @@ export default async function ProductPage({
                         </div>
                     </div>
                 </div>
+                <CTAContainerPhone content={data} />
             </section>
         )
     } catch (error) {
